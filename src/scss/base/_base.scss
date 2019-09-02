@@ -1,0 +1,17 @@
+html {
+  @include bp($bp-very-large) {
+    font-size: 87.5%; // 14px
+  }
+
+  @include bp($bp-large) {
+    font-size: 75%; // 12px
+  }
+
+  @include bp($bp-very-small) {
+    font-size: 62.5%; // 10px
+  }
+}
+
+body {
+  background-color: $color-snow-white;
+}

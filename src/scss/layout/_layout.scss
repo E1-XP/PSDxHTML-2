@@ -1,0 +1,13 @@
+.l-page-container {
+}
+
+.l-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  @include bp($bp-medium) {
+    flex-direction: column;
+  }
+}

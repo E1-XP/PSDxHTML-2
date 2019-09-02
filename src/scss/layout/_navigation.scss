@@ -1,0 +1,131 @@
+@mixin burger-layer {
+  width: 100%;
+  height: 2px;
+  background-color: $color-white;
+  border-radius: 3px;
+  transition: all 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: calc(105rem + 2.125rem * 2);
+  padding: 2.125rem;
+  width: 100%;
+  position: relative;
+  z-index: 999;
+
+  &__button {
+    width: 3.8rem;
+    height: 1.6rem;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: none;
+    cursor: pointer;
+
+    @include bp($bp-medium) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      visibility: visible;
+      z-index: 3;
+
+      & > span {
+        @include burger-layer();
+        display: block;
+
+        &::before,
+        &::after {
+          content: '';
+          display: flex;
+          position: absolute;
+
+          @include burger-layer();
+        }
+
+        &::before {
+          top: 0;
+        }
+
+        &::after {
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    width: 43rem;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 0.3s ease-in;
+
+    @include bp($bp-medium) {
+      display: flex;
+      visibility: visible;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      opacity: 0;
+      padding: 8.5rem;
+      background-color: rgba($color-primary, 0.95);
+      top: 0;
+      left: 0;
+      max-width: initial;
+      justify-content: space-around;
+      pointer-events: none;
+
+      .navigation__link {
+        font-size: 2rem;
+      }
+
+      .button {
+        padding: 0.5rem 2.6rem;
+
+        @include bp($bp-medium) {
+          padding: 1.2rem 3.4rem;
+        }
+      }
+    }
+  }
+
+  &__item {
+    @extend .item-text;
+
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &.js-is-open &__button {
+    outline: none;
+
+    & > span {
+      background-color: transparent;
+
+      &::before {
+        top: 8px;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: 8px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &.js-is-open &__list {
+    @include bp($bp-medium) {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}

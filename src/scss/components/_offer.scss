@@ -1,0 +1,31 @@
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 13.563rem;
+  height: 24.25rem;
+
+  &__image {
+    height: 11.625rem;
+    display: flex;
+    margin-bottom: auto;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    @extend .paragraph;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    @extend .heading;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.95rem;
+    margin-bottom: 1.3rem;
+  }
+}

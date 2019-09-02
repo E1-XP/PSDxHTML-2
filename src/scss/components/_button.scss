@@ -1,0 +1,21 @@
+.button {
+  @extend .item-text--alt;
+
+  text-transform: uppercase;
+  background-color: $color-primary;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 1.25rem 3.8rem;
+  line-height: initial;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+
+  &--small {
+    font-size: 0.938rem;
+    padding: 0.97rem 1.15rem;
+  }
+}

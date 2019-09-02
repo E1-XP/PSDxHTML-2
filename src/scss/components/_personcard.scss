@@ -1,0 +1,29 @@
+.person-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20.18rem;
+
+  &__image {
+    margin-bottom: auto;
+    max-width: 15rem;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    @extend .paragraph;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+
+  &__heading {
+    @extend .heading;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.95rem;
+  }
+}
