@@ -1,0 +1,40 @@
+.testimonial {
+  margin-top: 3.35rem;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 0.7rem;
+
+    & > img {
+      max-height: 8.125rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__quote {
+    height: 2.25rem;
+    &--inverted {
+      transform: rotate(180deg);
+    }
+
+    & > img {
+      height: 100%;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    letter-spacing: 0.011rem;
+  }
+
+  &__paragraph {
+    max-width: 51.25rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+  }
+}

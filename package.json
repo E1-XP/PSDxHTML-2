@@ -54,7 +54,8 @@
     "webpack-dev-server": "^3.4.1"
   },
   "dependencies": {
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "siema": "^1.5.1"
   },
   "browserslist": [
     "> 1%",

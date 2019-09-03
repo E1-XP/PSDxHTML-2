@@ -10,6 +10,11 @@
       content="Prepore for winter season in Mountain - Ski and snowboard school that offers courses for both beginners and semi-professionals"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsXKlA30puOUUqMrrKab7q9qMqkkO_c2s&callback=initMap"
+      async
+      defer
+    ></script>
   </head>
   <body>
     <div class="l-wrapper">
@@ -220,10 +225,249 @@
             </article>
           </div>
         </section>
-        <section class="section-about"></section>
-        <section class="section-testimonials"></section>
+        <section class="section-about">
+          <div class="section-about__content">
+            <h2 class="heading">
+              Mountain <br />
+              Snowboard School
+            </h2>
+            <p class="paragraph">
+              We’re not saying Snow Mountain has special powers, but a lot of
+              magical things do happen here. The slopes on Bald and Dollar
+              mountains enjoy a nearly lift line–free existence all winter long,
+              not to mention a nearly cloud-free one.
+            </p>
+            <p class="paragraph">
+              To those who wish to experience the best holiday time ever, we are
+              excited to offer unlimited fun on the slopes, homey cosiness,
+              wonderful views and snow activities. All this selection is
+              presented in a great variety for any taste, age and skill. We are
+              looking forward to seeing you in Snow Mountain ski resort at new
+              season!
+            </p>
+            <div class="section-about__statistics">
+              <div class="statistic-item">
+                <span class="statistic-item__value">1600</span>
+                <p class="statistic-item__title">
+                  Happy Clients
+                </p>
+              </div>
+              <div class="statistic-item">
+                <span class="statistic-item__value">18</span>
+                <p class="statistic-item__title">
+                  Proffesional awards
+                </p>
+              </div>
+              <div class="statistic-item">
+                <span class="statistic-item__value">213</span>
+                <p class="statistic-item__title">
+                  Reached tops
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-testimonials">
+          <h2 class="heading">
+            Testimonials
+          </h2>
+          <div class="carousel">
+            <ul class="carousel__list">
+              <li class="carousel__item">
+                <article class="testimonial">
+                  <figure class="testimonial__image">
+                    <span class="testimonial__quote">
+                      <img src="./assets/img/quote.png" alt="quote marks" />
+                    </span>
+                    <img src="./assets/img/client.png" alt="client photo" />
+                    <span
+                      class="testimonial__quote testimonial__quote--inverted"
+                    >
+                      <img src="./assets/img/quote.png" alt="quote marks" />
+                    </span>
+                  </figure>
+                  <h3 class="heading testimonial__heading">
+                    Alexa Smith
+                  </h3>
+                  <p class="paragraph testimonial__paragraph">
+                    Nulla metus metus ullamcorper vel tincidunt sed euismod nibh
+                    Quisque volutpat condimentum velit class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra.
+                  </p>
+                </article>
+              </li>
+              <li class="carousel__item">
+                <article class="testimonial">
+                  <figure class="testimonial__image">
+                    <span class="testimonial__quote">
+                      <img src="./assets/img/quote.png" alt="quote marks" />
+                    </span>
+                    <img src="./assets/img/client.png" alt="client photo" />
+                    <span
+                      class="testimonial__quote testimonial__quote--inverted"
+                    >
+                      <img src="./assets/img/quote.png" alt="quote marks" />
+                    </span>
+                  </figure>
+                  <h3 class="heading testimonial__heading">
+                    Alexa Smith
+                  </h3>
+                  <p class="paragraph testimonial__paragraph">
+                    Nulla metus metus ullamcorper vel tincidunt sed euismod nibh
+                    Quisque volutpat condimentum velit class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra.
+                  </p>
+                </article>
+              </li>
+              <li class="carousel__item">
+                <article class="testimonial">
+                  <figure class="testimonial__image">
+                    <span class="testimonial__quote">
+                      <img src="./assets/img/quote.png" alt="quote marks" />
+                    </span>
+                    <img src="./assets/img/client.png" alt="client photo" />
+                    <span
+                      class="testimonial__quote testimonial__quote--inverted"
+                    >
+                      <img src="./assets/img/quote.png" alt="quote marks" />
+                    </span>
+                  </figure>
+                  <h3 class="heading testimonial__heading">
+                    Alexa Smith
+                  </h3>
+                  <p class="paragraph testimonial__paragraph">
+                    Nulla metus metus ullamcorper vel tincidunt sed euismod nibh
+                    Quisque volutpat condimentum velit class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra.
+                  </p>
+                </article>
+              </li>
+              <li class="carousel__item">
+                <article class="testimonial">
+                  <figure class="testimonial__image">
+                    <span class="testimonial__quote">
+                      <img src="./assets/img/quote.png" alt="quote marks" />
+                    </span>
+                    <img src="./assets/img/client.png" alt="client photo" />
+                    <span
+                      class="testimonial__quote testimonial__quote--inverted"
+                    >
+                      <img src="./assets/img/quote.png" alt="quote marks" />
+                    </span>
+                  </figure>
+                  <h3 class="heading testimonial__heading">
+                    Alexa Smith
+                  </h3>
+                  <p class="paragraph testimonial__paragraph">
+                    Nulla metus metus ullamcorper vel tincidunt sed euismod nibh
+                    Quisque volutpat condimentum velit class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra.
+                  </p>
+                </article>
+              </li>
+              <li class="carousel__item">
+                <article class="testimonial">
+                  <figure class="testimonial__image">
+                    <span class="testimonial__quote">
+                      <img src="./assets/img/quote.png" alt="quote marks" />
+                    </span>
+                    <img src="./assets/img/client.png" alt="client photo" />
+                    <span
+                      class="testimonial__quote testimonial__quote--inverted"
+                    >
+                      <img src="./assets/img/quote.png" alt="quote marks" />
+                    </span>
+                  </figure>
+                  <h3 class="heading testimonial__heading">
+                    Alexa Smith
+                  </h3>
+                  <p class="paragraph testimonial__paragraph">
+                    Nulla metus metus ullamcorper vel tincidunt sed euismod nibh
+                    Quisque volutpat condimentum velit class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra.
+                  </p>
+                </article>
+              </li>
+            </ul>
+            <div class="carousel__controls">
+              <span class="carousel__button carousel__button--active"></span>
+              <span class="carousel__button"></span>
+              <span class="carousel__button"></span>
+              <span class="carousel__button"></span>
+              <span class="carousel__button"></span>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <section class="footer__info">
+          <div class="footer__info-container">
+            <h2 class="heading">
+              Contact Us
+            </h2>
+            <ul class="footer__list">
+              <li class="footer__list-item item">
+                <span class="item__icon"
+                  ><img src="./assets/img/phone-icon.png" alt="phone icon"
+                /></span>
+                <span class="item__text">
+                  +43 662 123456
+                </span>
+              </li>
+              <li class="footer__list-item item">
+                <span class="item__icon"
+                  ><img src="./assets/img/pin-icon.png" alt="pin icon"
+                /></span>
+                <span class="item__text">
+                  Paracelsusstraße 26, 5020 Salzburg, Austria
+                </span>
+              </li>
+              <li class="footer__list-item item">
+                <span class="item__icon"
+                  ><img src="./assets/img/mail-icon.png" alt=""
+                /></span>
+                <span class="item__text">
+                  INBOX@MOUNTain.COM
+                </span>
+              </li>
+              <li class="footer__list-item item">
+                <span class="item__icon"
+                  ><img src="./assets/img/clock-icon.png" alt=""
+                /></span>
+                <span class="item__text">
+                  OPEN HOURS: 8.00 AM – 10.00 PM MONDAY - SUNDAY
+                </span>
+              </li>
+              <li class="footer__list-item">
+                <ol class="footer__list footer__list--horizontal">
+                  <li class="footer__list-item">
+                    <a href="#" class="footer__link">
+                      <img
+                        src="./assets/img/twitter-icon.png"
+                        alt="twitter icon"
+                      />
+                    </a>
+                  </li>
+                  <li class="footer__list-item">
+                    <a href="#" class="footer__link">
+                      <img src="./assets/img/fb-icon.png" alt="facebook icon" />
+                    </a>
+                  </li>
+                  <li class="footer__list-item">
+                    <a href="#" class="footer__link">
+                      <img
+                        src="./assets/img/ig-icon.png"
+                        alt="instagram icon"
+                      />
+                    </a>
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="js-footer-map" class="footer__map"></section>
+      </footer>
     </div>
   </body>
 </html>

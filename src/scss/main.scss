@@ -1,21 +1,23 @@
-@import "../../node_modules/normalize-scss/sass/normalize";
+@import '../../node_modules/normalize-scss/sass/normalize';
 @include normalize();
 
-@import "./utils/variables";
-@import "./utils/helpers";
-@import "./utils/mixins";
+@import './utils/variables';
+@import './utils/helpers';
+@import './utils/mixins';
 
-@import "./base/reset";
-@import "./base/base";
-@import "./base/typography";
+@import './base/reset';
+@import './base/base';
+@import './base/typography';
 
-@import "./components/button";
-@import "./components/offer";
-@import "./components/personcard";
+@import './components/button';
+@import './components/carousel';
+@import './components/testimonial';
+@import './components/offer';
+@import './components/personcard';
 
-@import "layout/layout";
-@import "./layout/header";
-@import "./layout/footer";
-@import "./layout/navigation";
+@import 'layout/layout';
+@import './layout/header';
+@import './layout/footer';
+@import './layout/navigation';
 
-@import "./pages/home";
+@import './pages/home';
