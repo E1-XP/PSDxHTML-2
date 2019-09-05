@@ -22,20 +22,26 @@
 }
 
 .section-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: calc(100vw * 0.66);
-  align-content: flex-start;
-  width: 100%;
   margin-bottom: 8.4rem;
 
-  @include bp($bp-medium) {
-    height: calc(100vw * 1.33);
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: column;
+    height: calc(100vw * 0.66);
+    width: 100%;
+
+    @include bp($bp-medium) {
+      height: calc(100vw * 1.33);
+    }
   }
 
   &__item {
     width: calc(100% / 3);
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    overflow: hidden;
 
     @include bp($bp-medium) {
       width: 50%;
@@ -44,16 +50,24 @@
     & img {
       width: 100%;
       display: block;
+      position: relative;
+      transition: all 0.2s ease-out;
+      z-index: -1;
+    }
+
+    &:hover {
+      background-color: rgba($color-white, 0.1);
+
+      & > img {
+        transform: scale(1.05) rotate(-1.5deg);
+      }
     }
 
     &:last-of-type {
       margin-top: -0.8%;
-      z-index: -1;
-      position: relative;
 
       @include bp($bp-medium) {
         margin-top: -33.4%;
-        z-index: initial;
       }
     }
   }

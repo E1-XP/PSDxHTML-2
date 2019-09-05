@@ -1,3 +1,8 @@
-.js-transition-none {
+.h-transition-none {
   transition: none !important;
+}
+
+.h-hidden-with-transition {
+  opacity: 0;
+  pointer-events: none;
 }

@@ -33,24 +33,24 @@
           >
             <span></span>
           </button>
-          <ul id="nav-list" class="navigation__list js-transition-none">
+          <ul id="nav-list" class="navigation__list h-transition-none">
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Home</a>
+              <a href="/" class="navigation__link">Home</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">What We Offer</a>
+              <a href="#offer" class="navigation__link">What We Offer</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Gallery</a>
+              <a href="#gallery" class="navigation__link">Gallery</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">About Us</a>
+              <a href="#about" class="navigation__link">About Us</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Testimonials</a>
+              <a href="#testimonials" class="navigation__link">Testimonials</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Contact Us</a>
+              <a href="#contact" class="navigation__link">Contact Us</a>
             </li>
           </ul>
         </nav>
@@ -81,7 +81,7 @@
         </div>
       </header>
       <main>
-        <section class="section-offer">
+        <section id="offer" class="section-offer">
           <h2 class="heading">What we Offer</h2>
           <p class="paragraph">
             Skiing and snowboarding still rank among the undisputed winter sport
@@ -136,45 +136,113 @@
             </article>
           </div>
         </section>
-        <section class="section-gallery">
-          <figure class="section-gallery__item">
-            <img
-              src="./assets/img/-e-max-kukurudziak-607806-unsplash.jpg"
-              alt="boarder"
-            />
-          </figure>
-          <figure class="section-gallery__item">
-            <img
-              src="./assets/img/-e-fezbot2000-783167-unsplash.jpg"
-              alt="boarder"
-            />
-          </figure>
-          <figure class="section-gallery__item">
-            <img src="./assets/img/-e-sports-2982378_1920.jpg" alt="boarder" />
-          </figure>
-          <figure class="section-gallery__item">
-            <img
-              src="./assets/img/-e-snowboard-113784_1920.jpg"
-              alt="boarder"
-            />
-          </figure>
-          <figure class="section-gallery__item">
-            <img
-              src="./assets/img/-e-naomi-hutchinson-409309-unsplash.jpg"
-              alt="boarder"
-            />
-          </figure>
-          <figure class="section-gallery__item">
-            <img src="./assets/img/Contrast_2.jpg" alt="boarder" />
-          </figure>
-          <figure class="section-gallery__item">
-            <img
-              src="./assets/img/-e-joshua-reddekopp-217223-unsplash.jpg"
-              alt="boarder"
-            />
-          </figure>
+        <section id="gallery" class="section-gallery">
+          <div class="section-gallery__content">
+            <figure class="section-gallery__item">
+              <img
+                src="./assets/img/-e-max-kukurudziak-607806-unsplash.jpg"
+                alt="skier"
+              />
+            </figure>
+            <figure class="section-gallery__item">
+              <img
+                src="./assets/img/-e-fezbot2000-783167-unsplash.jpg"
+                alt="skier"
+              />
+            </figure>
+            <figure class="section-gallery__item">
+              <img
+                src="./assets/img/-e-sports-2982378_1920.jpg"
+                alt="boarder"
+              />
+            </figure>
+            <figure class="section-gallery__item">
+              <img
+                src="./assets/img/-e-snowboard-113784_1920.jpg"
+                alt="skier"
+              />
+            </figure>
+            <figure class="section-gallery__item">
+              <img
+                src="./assets/img/-e-naomi-hutchinson-409309-unsplash.jpg"
+                alt="skier"
+              />
+            </figure>
+            <figure class="section-gallery__item">
+              <img src="./assets/img/Contrast_2.jpg" alt="boarder" />
+            </figure>
+            <figure class="section-gallery__item">
+              <img
+                src="./assets/img/-e-joshua-reddekopp-217223-unsplash.jpg"
+                alt="skier"
+              />
+            </figure>
+          </div>
+          <div
+            id="lightbox"
+            class="carousel carousel--lightbox h-hidden-with-transition h-transition-none"
+          >
+            <button class="carousel__toggle-button">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                <path
+                  d="M14.1 13L24.8 2.3c0.3-0.3 0.3-0.8 0-1.1s-0.8-0.3-1.1 0L13 11.9 2.3 1.2c-0.3-0.3-0.8-0.3-1.1 0s-0.3 0.8 0 1.1L11.9 13 1.2 23.7c-0.3 0.3-0.3 0.8 0 1.1C1.4 24.9 1.6 25 1.8 25s0.4-0.1 0.5-0.2L13 14.1l10.7 10.7C23.9 24.9 24.1 25 24.3 25s0.4-0.1 0.5-0.2c0.3-0.3 0.3-0.8 0-1.1L14.1 13z"
+                  fill="#1D1D1B"
+                />
+              </svg>
+            </button>
+            <ul class="carousel__list">
+              <li class="carousel__item">
+                <img
+                  src="./assets/img/-e-max-kukurudziak-607806-unsplash.jpg"
+                  alt="skier"
+                />
+              </li>
+              <li class="carousel__item">
+                <img
+                  src="./assets/img/-e-fezbot2000-783167-unsplash.jpg"
+                  alt="skier"
+                />
+              </li>
+              <li class="carousel__item">
+                <img
+                  src="./assets/img/-e-sports-2982378_1920.jpg"
+                  alt="boarder"
+                />
+              </li>
+              <li class="carousel__item">
+                <img
+                  src="./assets/img/-e-snowboard-113784_1920.jpg"
+                  alt="skier"
+                />
+              </li>
+              <li class="carousel__item">
+                <img
+                  src="./assets/img/-e-naomi-hutchinson-409309-unsplash.jpg"
+                  alt="skier"
+                />
+              </li>
+              <li class="carousel__item">
+                <img src="./assets/img/Contrast_2.jpg" alt="boarder" />
+              </li>
+              <li class="carousel__item">
+                <img
+                  src="./assets/img/-e-joshua-reddekopp-217223-unsplash.jpg"
+                  alt="skier"
+                />
+              </li>
+            </ul>
+            <div class="carousel__controls">
+              <span class="carousel__button carousel__button--active"></span>
+              <span class="carousel__button"></span>
+              <span class="carousel__button"></span>
+              <span class="carousel__button"></span>
+              <span class="carousel__button"></span>
+              <span class="carousel__button"></span>
+              <span class="carousel__button"></span>
+            </div>
+          </div>
         </section>
-        <section class="section-crew">
+        <section id="crew" class="section-crew">
           <h2 class="heading">
             Meet Our Crew
           </h2>
@@ -225,7 +293,7 @@
             </article>
           </div>
         </section>
-        <section class="section-about">
+        <section id="about" class="section-about">
           <div class="section-about__content">
             <h2 class="heading">
               Mountain <br />
@@ -267,7 +335,7 @@
             </div>
           </div>
         </section>
-        <section class="section-testimonials">
+        <section id="testimonials" class="section-testimonials">
           <h2 class="heading">
             Testimonials
           </h2>
@@ -399,7 +467,7 @@
           </div>
         </section>
       </main>
-      <footer class="footer">
+      <footer id="contact" class="footer">
         <section class="footer__info">
           <div class="footer__info-container">
             <h2 class="heading">
