@@ -1,5 +1,5 @@
 @mixin burger-layer {
-  width: 100%;
+  width: 3.8rem;
   height: 2px;
   background-color: $color-white;
   border-radius: 3px;
@@ -17,8 +17,8 @@
   z-index: 999;
 
   &__button {
-    width: 3.8rem;
-    height: 1.6rem;
+    width: 4.8rem;
+    height: 2.6rem;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -34,6 +34,11 @@
       z-index: 3;
 
       & > span {
+        width: 3.8rem;
+        height: 100%;
+      }
+
+      & > span > span {
         @include burger-layer();
         display: block;
 
@@ -47,11 +52,11 @@
         }
 
         &::before {
-          top: 0;
+          transform: translateY(-8px);
         }
 
         &::after {
-          bottom: 0;
+          transform: translateY(8px);
         }
       }
     }
@@ -105,19 +110,19 @@
   }
 
   &.js-is-open &__button {
+    position: fixed;
+    right: 2rem;
     outline: none;
 
-    & > span {
+    & > span > span {
       background-color: transparent;
 
       &::before {
-        top: 8px;
-        transform: rotate(-45deg);
+        transform: translateY(0) rotate(-45deg);
       }
 
       &::after {
-        bottom: 8px;
-        transform: rotate(45deg);
+        transform: translateY(0) rotate(45deg);
       }
     }
   }

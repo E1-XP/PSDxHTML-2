@@ -12,12 +12,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsXKlA30puOUUqMrrKab7q9qMqkkO_c2s&callback=initMap"
-      async
       defer
     ></script>
   </head>
-  <body>
+  <body class="h-overflow-hidden">
     <div class="l-wrapper">
+      <div id="main-loader" class="loader">
+        <div  class="loader__indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
       <header class="header">
         <nav id="main-nav" class="navigation">
           <h1 class="logo">
@@ -31,7 +37,9 @@
             aria-label="navigation toggle button"
             aria-expanded="false"
           >
+          <span>
             <span></span>
+          </span>
           </button>
           <ul id="nav-list" class="navigation__list h-transition-none">
             <li class="navigation__item">

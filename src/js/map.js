@@ -1,6 +1,6 @@
 const mapContainer = document.getElementById('js-footer-map');
 
-export default function initMap() {
+function initMap() {
   const map = new google.maps.Map(mapContainer, {
     center: { lat: 47.810455, lng: 13.04854 },
     zoom: 12,
@@ -219,4 +219,9 @@ export default function initMap() {
     ]
   });
 }
-window.initMap = initMap;
+
+const initAndMoveMapIntoGlobalScope = () => {
+  window.initMap = initMap;
+};
+
+export default initAndMoveMapIntoGlobalScope;

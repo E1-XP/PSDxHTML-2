@@ -1,4 +1,5 @@
 .section-offer {
+  background-color: $color-snow-white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,11 +64,17 @@
       }
     }
 
+    &:nth-last-of-type(2) {
+      @include bp($bp-medium) {
+        height: 25%;
+      }
+    }
+
     &:last-of-type {
       margin-top: -0.8%;
 
       @include bp($bp-medium) {
-        margin-top: -33.4%;
+        margin-top: initial;
       }
     }
   }
