@@ -8,6 +8,8 @@
   background: radial-gradient(
     ellipse at center,
     $color-secondary-light 0%,
+    $color-secondary-light 30%,
+    $color-secondary 85%,
     $color-secondary 100%
   );
 
@@ -25,7 +27,7 @@
 
   @include bp($bp-very-small) {
     height: 108vh;
-    min-height: 61rem;
+    min-height: 63rem;
   }
 
   .logo {
@@ -46,25 +48,38 @@
     }
 
     @include bp($bp-very-small) {
-      width: 93%;
+      width: 100%;
     }
   }
 
   &__heading {
     @extend .heading;
+
     font-size: 1.875rem;
     line-height: 4.425rem;
-    color: $color-white-alt;
-    opacity: 0.4;
+    color: lighten($color-secondary-light, 18%);
   }
 
   &__subtitle {
     @extend .heading;
+
     font-size: 15.625rem;
     line-height: 14.625rem;
     letter-spacing: -0.8rem;
-    color: $color-white-alt;
-    opacity: 0.4;
+    color: lighten($color-secondary-light, 10%);
+
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+      background: linear-gradient(
+        to right,
+        lighten($color-secondary-light, 5%) 0%,
+        $color-secondary-vibrant 40%,
+        $color-secondary-vibrant 57%,
+        lighten($color-secondary-light, 3%) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     @include bp($bp-medium) {
       font-size: 19vw;
@@ -72,8 +87,9 @@
       letter-spacing: -0.6rem;
     }
 
-    @include bp($bp-small) {
+    @include bp($bp-very-small) {
       letter-spacing: -0.4rem;
+      font-size: 20vw;
     }
   }
 
@@ -111,6 +127,8 @@
     @include bp($bp-very-small) {
       text-align: center;
       top: 2.3rem;
+      width: 93%;
+      margin: 0 auto;
 
       & br {
         display: none;
@@ -136,7 +154,7 @@
 
     @include bp($bp-very-small) {
       align-self: center;
-      top: 4.1rem;
+      top: 3.5rem;
     }
   }
 
@@ -150,8 +168,11 @@
     object-position: 35%;
 
     @include bp($bp-very-small) {
-      height: calc(108vh - (128px));
-      min-height: 48.2rem;
+      height: calc(107.5vh - (128px));
+      min-height: 47.2rem;
+      object-position: calc(42vw + 5.5vh);
+      width: auto;
+      object-fit: initial;
     }
   }
 
@@ -173,15 +194,16 @@
     }
 
     @include bp($bp-very-small) {
-      height: calc(100vh - 335px);
-      left: 0;
-      right: initial;
-      bottom: 8vh;
-      width: 100%;
+      height: calc(98% - 345px);
+      left: initial;
+      right: 0;
+      bottom: 6vh;
+      width: calc(100% + (100vw - 500px) * 0.1vh);
       object-fit: cover;
       transform: none;
       object-position: 28%;
       min-height: 240px;
+      max-width: 100%;
     }
   }
 }
