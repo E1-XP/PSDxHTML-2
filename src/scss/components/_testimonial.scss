@@ -11,6 +11,11 @@
       max-height: 8.125rem;
       margin-bottom: 0.5rem;
     }
+
+    & > .lazyload,
+    .lazyloading {
+      min-width: calc(80px - (80px * 0.2));
+    }
   }
 
   &__quote {

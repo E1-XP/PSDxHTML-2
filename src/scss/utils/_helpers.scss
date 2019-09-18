@@ -10,3 +10,20 @@
 .h-overflow-hidden {
   overflow: hidden;
 }
+
+.h-block-page-scroll {
+  width: 100%;
+  position: fixed;
+
+  & body {
+    overflow-y: scroll;
+  }
+}
+
+.lazyload,
+.lazyloading {
+  &:not(section) {
+    filter: blur(10px);
+    transform: scale(1.2);
+  }
+}

@@ -18,7 +18,7 @@
   <body class="h-overflow-hidden">
     <div class="l-wrapper">
       <div id="main-loader" class="loader">
-        <div  class="loader__indicator">
+        <div class="loader__indicator">
           <span></span>
           <span></span>
           <span></span>
@@ -37,9 +37,9 @@
             aria-label="navigation toggle button"
             aria-expanded="false"
           >
-          <span>
-            <span></span>
-          </span>
+            <span>
+              <span></span>
+            </span>
           </button>
           <ul id="nav-list" class="navigation__list h-transition-none">
             <li class="navigation__item">
@@ -102,7 +102,12 @@
           <div class="l-container">
             <article class="offer">
               <figure class="offer__image">
-                <img src="./assets/img/ski.png" alt="skiing person" />
+                <img
+                  class="lazyload"
+                  src="./assets/img/ski-min.png"
+                  data-src="./assets/img/ski.png"
+                  alt="skiing person"
+                />
               </figure>
               <p class="offer__subtitle">
                 New to skiing?
@@ -116,7 +121,12 @@
             </article>
             <article class="offer">
               <figure class="offer__image">
-                <img src="./assets/img/snowboard.png" alt="skiing person" />
+                <img
+                  class="lazyload"
+                  src="./assets/img/snowboard-min.png"
+                  data-src="./assets/img/snowboard.png" 
+                  alt="skiing person"
+                />
               </figure>
               <p class="offer__subtitle">
                 Need a crew?
@@ -130,7 +140,12 @@
             </article>
             <article class="offer">
               <figure class="offer__image">
-                <img src="./assets/img/snowboarder.png" alt="skiing person" />
+                <img
+                  class="lazyload"
+                  src="./assets/img/snowboarder-min.png"
+                  data-src="./assets/img/snowboarder.png"
+                  alt="skiing person"
+                />
               </figure>
               <p class="offer__subtitle">
                 Wanna more?
@@ -148,40 +163,57 @@
           <div class="section-gallery__content">
             <figure class="section-gallery__item">
               <img
-                src="./assets/img/-e-max-kukurudziak-607806-unsplash.jpg"
+                class="lazyload"
+                src="./assets/img/-e-max-kukurudziak-607806-unsplash-min.png"
+                data-src="./assets/img/-e-max-kukurudziak-607806-unsplash.jpg"
                 alt="skier"
               />
             </figure>
             <figure class="section-gallery__item">
               <img
-                src="./assets/img/-e-fezbot2000-783167-unsplash.jpg"
+                class="lazyload"
+                src="./assets/img/-e-fezbot2000-783167-unsplash-min.png"
+                data-src="./assets/img/-e-fezbot2000-783167-unsplash.jpg"
                 alt="skier"
               />
             </figure>
             <figure class="section-gallery__item">
               <img
-                src="./assets/img/-e-sports-2982378_1920.jpg"
+                class="lazyload"
+                src="./assets/img/-e-sports-2982378_1920-min.png"
+                data-src="./assets/img/-e-sports-2982378_1920.jpg"
                 alt="boarder"
               />
             </figure>
             <figure class="section-gallery__item">
               <img
-                src="./assets/img/-e-snowboard-113784_1920.jpg"
+                class="lazyload"
+                src="./assets/img/-e-snowboard-113784_1920-min.png"
+                data-src="./assets/img/-e-snowboard-113784_1920.jpg"
                 alt="skier"
               />
             </figure>
             <figure class="section-gallery__item">
               <img
-                src="./assets/img/-e-naomi-hutchinson-409309-unsplash.jpg"
+                class="lazyload"
+                src="./assets/img/-e-naomi-hutchinson-409309-unsplash-min.png"
+                data-src="./assets/img/-e-naomi-hutchinson-409309-unsplash.jpg"
                 alt="skier"
               />
             </figure>
             <figure class="section-gallery__item">
-              <img src="./assets/img/Contrast_2.jpg" alt="boarder" />
+              <img
+                class="lazyload"
+                src="./assets/img/Contrast_2-min.png"
+                data-src="./assets/img/Contrast_2.jpg"
+                alt="boarder"
+              />
             </figure>
             <figure class="section-gallery__item">
               <img
-                src="./assets/img/-e-joshua-reddekopp-217223-unsplash.jpg"
+                class="lazyload"
+                src="./assets/img/-e-joshua-reddekopp-217223-unsplash-min.png"
+                data-src="./assets/img/-e-joshua-reddekopp-217223-unsplash.jpg"
                 alt="skier"
               />
             </figure>
@@ -190,7 +222,10 @@
             id="lightbox"
             class="carousel carousel--lightbox h-hidden-with-transition h-transition-none"
           >
-            <button class="carousel__toggle-button">
+            <button
+              class="carousel__toggle-button"
+              aria-label="carousel toggle button"
+            >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
                 <path
                   d="M14.1 13L24.8 2.3c0.3-0.3 0.3-0.8 0-1.1s-0.8-0.3-1.1 0L13 11.9 2.3 1.2c-0.3-0.3-0.8-0.3-1.1 0s-0.3 0.8 0 1.1L11.9 13 1.2 23.7c-0.3 0.3-0.3 0.8 0 1.1C1.4 24.9 1.6 25 1.8 25s0.4-0.1 0.5-0.2L13 14.1l10.7 10.7C23.9 24.9 24.1 25 24.3 25s0.4-0.1 0.5-0.2c0.3-0.3 0.3-0.8 0-1.1L14.1 13z"
@@ -198,47 +233,64 @@
                 />
               </svg>
             </button>
-            <ul class="carousel__list">
-              <li class="carousel__item">
+            <div class="carousel__content">
+              <figure class="carousel__item">
                 <img
-                  src="./assets/img/-e-max-kukurudziak-607806-unsplash.jpg"
+                  class="lazyload"
+                  src="./assets/img/-e-max-kukurudziak-607806-unsplash-min.png"
+                  data-src="./assets/img/-e-max-kukurudziak-607806-unsplash.jpg"
                   alt="skier"
                 />
-              </li>
-              <li class="carousel__item">
+              </figure>
+              <figure class="carousel__item">
                 <img
-                  src="./assets/img/-e-fezbot2000-783167-unsplash.jpg"
+                  class="lazyload"
+                  src="./assets/img/-e-fezbot2000-783167-unsplash-min.png"
+                  data-src="./assets/img/-e-fezbot2000-783167-unsplash.jpg"
                   alt="skier"
                 />
-              </li>
-              <li class="carousel__item">
+              </figure>
+              <figure class="carousel__item">
                 <img
-                  src="./assets/img/-e-sports-2982378_1920.jpg"
+                  class="lazyload"
+                  src="./assets/img/-e-sports-2982378_1920-min.png"
+                  data-src="./assets/img/-e-sports-2982378_1920.jpg"
                   alt="boarder"
                 />
-              </li>
-              <li class="carousel__item">
+              </figure>
+              <figure class="carousel__item">
                 <img
-                  src="./assets/img/-e-snowboard-113784_1920.jpg"
+                  class="lazyload"
+                  src="./assets/img/-e-snowboard-113784_1920-min.png"
+                  data-src="./assets/img/-e-snowboard-113784_1920.jpg"
                   alt="skier"
                 />
-              </li>
-              <li class="carousel__item">
+              </figure>
+              <figure class="carousel__item">
                 <img
-                  src="./assets/img/-e-naomi-hutchinson-409309-unsplash.jpg"
+                  class="lazyload"
+                  src="./assets/img/-e-naomi-hutchinson-409309-unsplash-min.png"
+                  data-src="./assets/img/-e-naomi-hutchinson-409309-unsplash.jpg"
                   alt="skier"
                 />
-              </li>
-              <li class="carousel__item">
-                <img src="./assets/img/Contrast_2.jpg" alt="boarder" />
-              </li>
-              <li class="carousel__item">
+              </figure>
+              <figure class="carousel__item">
                 <img
-                  src="./assets/img/-e-joshua-reddekopp-217223-unsplash.jpg"
+                  class="lazyload"
+                  src="./assets/img/Contrast_2-min.png"
+                  data-src="./assets/img/Contrast_2.jpg"
+                  alt="boarder"
+                />
+              </figure>
+              <figure class="carousel__item">
+                <img
+                  class="lazyload"
+                  src="./assets/img/-e-joshua-reddekopp-217223-unsplash-min.png"
+                  data-src="./assets/img/-e-joshua-reddekopp-217223-unsplash.jpg"
                   alt="skier"
                 />
-              </li>
-            </ul>
+              </figure>
+            </div>
             <div class="carousel__controls">
               <span class="carousel__button carousel__button--active"></span>
               <span class="carousel__button"></span>
@@ -257,7 +309,12 @@
           <div class="l-container">
             <article class="person-card">
               <figure class="person-card__image">
-                <img src="./assets/img/person1.png" alt="crew person" />
+                <img
+                  class="lazyload"
+                  src="./assets/img/person1-min.png"
+                  data-src="./assets/img/person1.png"
+                  alt="crew person"
+                />
               </figure>
               <p class="person-card__subtitle">
                 Instructor
@@ -268,7 +325,12 @@
             </article>
             <article class="person-card">
               <figure class="person-card__image">
-                <img src="./assets/img/person2.png" alt="crew person" />
+                <img
+                  class="lazyload"
+                 src="./assets/img/person2-min.png"
+                  data-src="./assets/img/person2.png"
+                  alt="crew person"
+                />
               </figure>
               <p class="person-card__subtitle">
                 Instructor
@@ -279,7 +341,12 @@
             </article>
             <article class="person-card">
               <figure class="person-card__image">
-                <img src="./assets/img/person3.png" alt="crew person" />
+                <img
+                  class="lazyload"
+                  src="./assets/img/person3-min.png"
+                  data-src="./assets/img/person3.png"
+                  alt="crew person"
+                />
               </figure>
               <p class="person-card__subtitle">
                 Instructor
@@ -290,7 +357,12 @@
             </article>
             <article class="person-card">
               <figure class="person-card__image">
-                <img src="./assets/img/person4.png" alt="crew person" />
+                <img
+                  class="lazyload"
+                  src="./assets/img/person4-min.png"
+                  data-src="./assets/img/person4.png"
+                  alt="crew person"
+                />
               </figure>
               <p class="person-card__subtitle">
                 Instructor
@@ -301,7 +373,11 @@
             </article>
           </div>
         </section>
-        <section id="about" class="section-about">
+        <section
+          id="about"
+          class="section-about lazyload"
+          data-bg="./assets/img/statistics-background.jpg"
+        >
           <div class="section-about__content">
             <h2 class="heading">
               Mountain <br />
@@ -348,14 +424,19 @@
             Testimonials
           </h2>
           <div class="carousel">
-            <ul class="carousel__list">
-              <li class="carousel__item">
+            <div class="carousel__content">
+              <div class="carousel__item">
                 <article class="testimonial">
                   <figure class="testimonial__image">
                     <span class="testimonial__quote">
                       <img src="./assets/img/quote.png" alt="quote marks" />
                     </span>
-                    <img src="./assets/img/client.png" alt="client photo" />
+                    <img
+                      class="lazyload"
+                      src="./assets/img/client-min.png"
+                      data-src="./assets/img/client.png"
+                      alt="client photo"
+                    />
                     <span
                       class="testimonial__quote testimonial__quote--inverted"
                     >
@@ -371,14 +452,19 @@
                     sociosqu ad litora torquent per conubia nostra.
                   </p>
                 </article>
-              </li>
-              <li class="carousel__item">
+              </div>
+              <div class="carousel__item">
                 <article class="testimonial">
                   <figure class="testimonial__image">
                     <span class="testimonial__quote">
                       <img src="./assets/img/quote.png" alt="quote marks" />
                     </span>
-                    <img src="./assets/img/client.png" alt="client photo" />
+                    <img
+                      class="lazyload"
+                     src="./assets/img/client-min.png"
+                      data-src="./assets/img/client.png"
+                      alt="client photo"
+                    />
                     <span
                       class="testimonial__quote testimonial__quote--inverted"
                     >
@@ -394,14 +480,19 @@
                     sociosqu ad litora torquent per conubia nostra.
                   </p>
                 </article>
-              </li>
-              <li class="carousel__item">
+              </div>
+              <div class="carousel__item">
                 <article class="testimonial">
                   <figure class="testimonial__image">
                     <span class="testimonial__quote">
                       <img src="./assets/img/quote.png" alt="quote marks" />
                     </span>
-                    <img src="./assets/img/client.png" alt="client photo" />
+                    <img
+                      class="lazyload"
+                     src="./assets/img/client-min.png"
+                      data-src="./assets/img/client.png"
+                      alt="client photo"
+                    />
                     <span
                       class="testimonial__quote testimonial__quote--inverted"
                     >
@@ -417,14 +508,19 @@
                     sociosqu ad litora torquent per conubia nostra.
                   </p>
                 </article>
-              </li>
-              <li class="carousel__item">
+              </div>
+              <div class="carousel__item">
                 <article class="testimonial">
                   <figure class="testimonial__image">
                     <span class="testimonial__quote">
                       <img src="./assets/img/quote.png" alt="quote marks" />
                     </span>
-                    <img src="./assets/img/client.png" alt="client photo" />
+                    <img
+                      class="lazyload"
+                    src="./assets/img/client-min.png"
+                      data-src="./assets/img/client.png"
+                      alt="client photo"
+                    />
                     <span
                       class="testimonial__quote testimonial__quote--inverted"
                     >
@@ -440,14 +536,19 @@
                     sociosqu ad litora torquent per conubia nostra.
                   </p>
                 </article>
-              </li>
-              <li class="carousel__item">
+              </div>
+              <div class="carousel__item">
                 <article class="testimonial">
                   <figure class="testimonial__image">
                     <span class="testimonial__quote">
                       <img src="./assets/img/quote.png" alt="quote marks" />
                     </span>
-                    <img src="./assets/img/client.png" alt="client photo" />
+                    <img
+                      class="lazyload"
+                     src="./assets/img/client-min.png"
+                      data-src="./assets/img/client.png"
+                      alt="client photo"
+                    />
                     <span
                       class="testimonial__quote testimonial__quote--inverted"
                     >
@@ -463,8 +564,8 @@
                     sociosqu ad litora torquent per conubia nostra.
                   </p>
                 </article>
-              </li>
-            </ul>
+              </div>
+            </div>
             <div class="carousel__controls">
               <span class="carousel__button carousel__button--active"></span>
               <span class="carousel__button"></span>

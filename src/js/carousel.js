@@ -79,7 +79,7 @@ const enableCarouselBtns = (carousel, btns) => {
 
 const createSliderInstances = () => {
   const lightboxSlider = new Siema({
-    selector: '#gallery .carousel--lightbox .carousel__list',
+    selector: '#gallery .carousel--lightbox .carousel__content',
     loop: true,
     duration: 300,
     onChange: () =>
@@ -87,7 +87,7 @@ const createSliderInstances = () => {
   });
 
   const testimonialsCarousel = new Siema({
-    selector: '#testimonials .carousel__list',
+    selector: '#testimonials .carousel__content',
     loop: true,
     duration: 300,
     onChange: () =>

@@ -1,3 +1,5 @@
+import 'lazysizes';
+
 import enableSliders from './carousel';
 import initAndMoveMapIntoGlobalScope from './map';
 import {
@@ -13,6 +15,8 @@ const navList = document.getElementById('nav-list');
 const navButton = document.getElementById('nav-btn');
 
 const isNavOpen = () => mainNav.classList.contains('js-is-open');
+const toggleScrollBlock = () =>
+  document.body.parentElement.classList.toggle('h-block-page-scroll');
 
 const onNavClick = () => {
   mainNav.classList.toggle('js-is-open');
@@ -21,7 +25,14 @@ const onNavClick = () => {
   if (isOpen) enableTransition(navList);
   navButton.setAttribute('aria-expanded', `${isOpen}`);
 
-  window.scrollTo(0, 0);
+  toggleScrollBlock();
+};
+
+const lazyLoadCSSBackground = () => {
+  document.addEventListener('lazybeforeunveil', e => {
+    const bg = e.target.getAttribute('data-bg');
+    if (bg) e.target.style.backgroundImage = `url(${bg})`;
+  });
 };
 
 const checkBeforeDisabling = () => !isNavOpen() && disableTransition(navList);
@@ -46,4 +57,5 @@ initAndMoveMapIntoGlobalScope();
 window.addEventListener('load', () => {
   toggleVisibility(preloader);
   toggleOverflow(document.body);
+  lazyLoadCSSBackground();
 });

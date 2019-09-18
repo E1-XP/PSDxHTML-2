@@ -7,11 +7,9 @@
 
   &__image {
     height: 11.625rem;
-    display: flex;
     margin-bottom: auto;
-
     & img {
-      width: 100%;
+      height: 100%;
     }
   }
 

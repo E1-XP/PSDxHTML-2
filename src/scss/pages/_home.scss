@@ -78,6 +78,15 @@
       }
     }
   }
+
+  & .carousel--lightbox {
+    .lazyload,
+    .lazyloading {
+      width: 50vw;
+      height: auto;
+      max-height: 88%;
+    }
+  }
 }
 
 .section-crew {
@@ -97,14 +106,14 @@
 }
 
 .section-about {
-  background-image: url($img-about);
   height: calc(100vw * 0.5625);
   background-size: cover;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 
   @include bp($bp-medium) {
-    background-size: 150%;
     background-repeat: no-repeat;
     justify-content: center;
     height: calc(100vw * 0.8485);
@@ -119,10 +128,25 @@
     height: calc((100vw * 0.8285) + (700px - 100vw));
   }
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url($img-about-min);
+    background-size: cover;
+    z-index: -1;
+    filter: blur(10px);
+    transform: scale(1.1);
+  }
+
   &__content {
     margin-top: -4.8rem;
     margin-left: calc((100vw - 950px) * 0.33);
     max-width: 50rem;
+    position: relative;
 
     @include bp($bp-large) {
       margin-top: -7.6rem;
