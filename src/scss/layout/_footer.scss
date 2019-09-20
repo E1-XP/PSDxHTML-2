@@ -30,12 +30,13 @@
     }
   }
 
-  .heading {
+  &__heading {
     color: $color-white;
   }
 
   &__list {
-    @extend .paragraph;
+    @include paragraph;
+
     color: $color-snow-white;
     text-transform: uppercase;
     line-height: 1.625rem;

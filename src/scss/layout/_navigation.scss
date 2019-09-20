@@ -33,13 +33,12 @@
       visibility: visible;
       z-index: 3;
 
-      & > span {
+      &-inner {
         width: 3.8rem;
         height: 100%;
-      }
 
-      & > span > span {
         @include burger-layer();
+
         display: block;
 
         &::before,
@@ -104,7 +103,7 @@
   }
 
   &__item {
-    @extend .item-text;
+    @include item-text;
 
     transition: opacity 0.2s ease-in-out;
 
@@ -118,7 +117,7 @@
     right: 2rem;
     outline: none;
 
-    & > span > span {
+    &-inner {
       background-color: transparent;
 
       &::before {

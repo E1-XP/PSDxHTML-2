@@ -53,7 +53,7 @@
   }
 
   &__heading {
-    @extend .heading;
+    @include heading;
 
     font-size: 1.875rem;
     line-height: 4.425rem;
@@ -61,7 +61,7 @@
   }
 
   &__subtitle {
-    @extend .heading;
+    @include heading;
 
     font-size: 15.625rem;
     line-height: 14.625rem;
@@ -93,7 +93,7 @@
     }
   }
 
-  .paragraph {
+  &__paragraph {
     color: $color-white-alt;
     position: relative;
     z-index: 10;
@@ -136,7 +136,7 @@
     }
   }
 
-  .button {
+  &__button {
     position: relative;
     z-index: 10;
     align-self: flex-start;

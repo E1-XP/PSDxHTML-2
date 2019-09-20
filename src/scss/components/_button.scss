@@ -1,5 +1,5 @@
 .button {
-  @extend .item-text--alt;
+  @include item-text--alt;
 
   text-transform: uppercase;
   background-color: $color-primary;

@@ -4,7 +4,7 @@ body {
   font-family: 'Muli', sans-serif;
 }
 
-.heading {
+@mixin heading {
   font-family: 'Catamaran', sans-serif;
   color: $color-dark-grey;
   font-size: 3.75rem;
@@ -13,23 +13,39 @@ body {
   text-transform: uppercase;
 }
 
-.paragraph {
+@mixin paragraph {
   color: $color-light-grey;
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 2rem;
 }
 
-.item-text {
+@mixin item-text {
   color: $color-white;
   font-size: 1rem;
   font-weight: 700;
   line-height: 5.625rem;
 }
 
-.item-text--alt {
+@mixin item-text--alt {
   color: $color-white-alt;
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 5.625rem;
+}
+
+.t-heading {
+  @include heading;
+}
+
+.t-paragraph {
+  @include paragraph;
+}
+
+.t-item-text {
+  @include item-text;
+
+  &--alt {
+    @include item-text--alt;
+  }
 }
