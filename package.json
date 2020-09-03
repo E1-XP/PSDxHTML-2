@@ -54,7 +54,7 @@
     "webpack-dev-server": "^3.4.1"
   },
   "dependencies": {
-    "lazysizes": "^5.1.1",
+    "lazysizes": "^5.2.1",
     "normalize-scss": "^7.0.1",
     "siema": "^1.5.1"
   },
