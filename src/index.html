@@ -10,6 +10,7 @@
       content="Prepore for winter season in Mountain - Ski and snowboard school that offers courses for both beginners and semi-professionals"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="preconnect" href="https://maps.googleapis.com" crossorigin />
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsXKlA30puOUUqMrrKab7q9qMqkkO_c2s&callback=initMap"
       defer
@@ -31,11 +32,8 @@
               <img src="./assets/img/logo.webp" alt="Mountain" />
             </a>
           </h1>
-          <button id="nav-btn" class="navigation__button" aria-expanded="false">
-            <span class="navigation__button-label h-visually-hidden">
-              Toggle Navigation menu
-            </span>
-            <span class="navigation__button-inner"></span>
+          <button id="nav-btn" class="navigation__button" aria-expanded="false" aria-label="Toggle navigation menu" >
+            <span class="navigation__button-inner" aria-hidden="true"></span>
           </button>
           <ul id="nav-list" class="navigation__list h-transition-none">
             <li class="navigation__item">
